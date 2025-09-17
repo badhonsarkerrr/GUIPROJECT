@@ -9,8 +9,8 @@ public class TrainTicket extends Ticket {
         super();
     }
     public TrainTicket(String passengerName, int seatNo, double price) {
-        super(passengerName, seatNo); // Call Ticket's constructor
-        this.price = price;           // Set price separately
+        super(passengerName, seatNo); 
+        this.price = price;           
         System.out.println("Train Ticket created.");
     }
     

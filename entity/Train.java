@@ -1,13 +1,5 @@
 package entity;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import javax.swing.JOptionPane;
 
-import entity.Ticket;
-import entity.TrainTicket;
 
 public class Train {
     private String trainName;

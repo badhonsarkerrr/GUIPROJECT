@@ -55,7 +55,7 @@ public abstract class Ticket implements Bookable {
         System.out.println("Booking Status: " + (isBooked ? "Booked" : "Not Booked"));
     }
    
-    public abstract boolean bookTicket(double payment); // Abstract method
+    public abstract boolean bookTicket(double payment); 
     
 
     public void insertInfo() {

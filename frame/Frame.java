@@ -1,18 +1,18 @@
-//step 0
+
 package frame;
 import java.lang.*;
-import java.awt.*; //package for font & coloring
-import javax.swing.*; //package for GUI components 
+import java.awt.*; 
+import javax.swing.*;  
 
 import entity.*;
 
-import java.awt.event.*; //package for interfaces
-import java.io.*; //for File class
+import java.awt.event.*; 
+import java.io.*; 
 
-//step 1
+
 public class Frame extends JFrame implements MouseListener, ActionListener
 {
-	//step 2
+	
 	private Font f1, f2, f3, f4;
 	private Color c1, c2, c3, c4;
 	private JPanel panel;
@@ -28,46 +28,46 @@ public class Frame extends JFrame implements MouseListener, ActionListener
 	private ImageIcon img;
 	private  JButton btClear;
 	ButtonGroup group;
-	//step 4
+	
 	public Frame()
 	{
-		//step 4(a)
+		
 		super("My First GUI");
-		//super.setSize(1000,500); 
-		super.setBounds(300, 100, 800, 600); //(x,y,width, height)
+		 
+		super.setBounds(300, 100, 800, 600); 
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		//step 4(b)
+		
 		panel = new JPanel();
 		panel.setLayout(null);
-		c2 = new Color(198, 199, 186); //(R, G, B)
+		c2 = new Color(198, 199, 186); 
 		c3 = new Color(0, 0, 0);
 		panel.setBackground(c2);
 		
-		//step 4(d)
-		f1 = new Font("Cambria",Font.BOLD, 30); //(font name, font style, font size)
-		f2 = new Font("Cambria",Font.BOLD, 20); //(font name, font style, font size)
+		
+		f1 = new Font("Cambria",Font.BOLD, 30); 
+		f2 = new Font("Cambria",Font.BOLD, 20); 
 		c1 = new Color(255, 0, 0); //(R, G, B)
 		
 		label1 = new JLabel("Railway Reservation System");
-		label1.setBounds(200, 0, 500,40);//(x,y,width, height)
+		label1.setBounds(200, 0, 500,40);
 		label1.setFont(f1);
 		label1.setForeground(c3);
 		label1.addMouseListener(this);
 		panel.add(label1);
 		
 		label3 = new JLabel("Passenger Name:");
-		label3.setBounds(10, 50, 200,30);//(x,y,width, height)
+		label3.setBounds(10, 50, 200,30);
 		label3.setFont(f2);
 		panel.add(label3);
 		
 		tf1 = new JTextField();
-		tf1.setBounds(190, 50, 200,30);//(x,y,width, height)
+		tf1.setBounds(190, 50, 200,30);
 		tf1.setFont(f2);
 		panel.add(tf1);
 		
 		label4 = new JLabel("Seat Number:");
-		label4.setBounds(10, 90, 200,30);//(x,y,width, height)
+		label4.setBounds(10, 90, 200,30);
 		label4.setFont(f2);
 		panel.add(label4);
 		
@@ -77,22 +77,17 @@ public class Frame extends JFrame implements MouseListener, ActionListener
 		panel.add(tf2);
 
 
-		/*pf1 = new JPasswordField();
-		pf1.setBounds(400, 90, 150,30);//(x,y,width, height)
-		pf1.setFont(f2);
-		pf1.setEchoChar('$');
-		pf1.addActionListener(this);
-		//panel.add(pf1);*/
+		
 		
 		bt3 = new JButton("Search");
-		bt3.setBounds(400, 90, 100, 30);//(x,y,width, height)
+		bt3.setBounds(400, 90, 100, 30);
 		bt3.setFont(f2);
 		bt3.setBackground(Color.GREEN);
 		bt3.addActionListener(this);
 		panel.add(bt3);
 		
 		label2 = new JLabel("Coach Type:");
-		label2.setBounds(10, 130, 200,30);//(x,y,width, height)
+		label2.setBounds(10, 130, 200,30);
 		label2.setFont(f2);
 		panel.add(label2);
 		
@@ -111,27 +106,27 @@ public class Frame extends JFrame implements MouseListener, ActionListener
 		bg1.add(rb2);
 		
 		label4 = new JLabel("Train Name:");
-		label4.setBounds(10, 170, 120,30);//(x,y,width, height)
+		label4.setBounds(10, 170, 120,30);
 		label4.setFont(f2);
 		panel.add(label4);
 		
 		cb1 = new JCheckBox("Bonolota Express");
-		cb1.setBounds(130, 170, 200,30);//(x,y,width, height)
+		cb1.setBounds(130, 170, 200,30);
 		cb1.setFont(f2);
 		panel.add(cb1);
 		
 		cb2 = new JCheckBox("SilkSity Express");
-		cb2.setBounds(130, 210, 200,30);//(x,y,width, height)
+		cb2.setBounds(130, 210, 200,30);
 		cb2.setFont(f2);
 		panel.add(cb2);
 		
 		cb3 = new JCheckBox("Subarna Express");
-		cb3.setBounds(130, 250, 200,30);//(x,y,width, height)
+		cb3.setBounds(130, 250, 200,30);
 		cb3.setFont(f2);
 		panel.add(cb3);
 		
 		cb4 = new JCheckBox("Padma Express");
-		cb4.setBounds(130, 290, 200,30);//(x,y,width, height)
+		cb4.setBounds(130, 290, 200,30);
 		cb4.setFont(f2);
 		panel.add(cb4);
 		
@@ -141,7 +136,7 @@ public class Frame extends JFrame implements MouseListener, ActionListener
                group.add(cb3);
                group.add(cb4);
           btClear = new JButton("Clear");
-btClear.setBounds(500, 500, 150, 30); // adjust position
+btClear.setBounds(500, 500, 150, 30); 
 btClear.setFont(f2);
 btClear.setBackground(Color.RED);
 btClear.addActionListener(this);
@@ -153,13 +148,13 @@ panel.add(btClear);
 
 img = new ImageIcon("Picture/railwa.png");
 		label7 = new JLabel(img);
-		label7.setBounds(500, 100, 300, 100);//(x,y,width, height)
+		label7.setBounds(500, 100, 300, 100);
 		panel.add(label7);
 
 
 	
 		bt1 = new JButton("BooK Ticket");
-		bt1.setBounds(100, 340, 150,30);//(x,y,width, height)
+		bt1.setBounds(100, 340, 150,30);
 		bt1.setFont(f2);
 		bt1.setBackground(Color.GREEN);
 		bt1.addMouseListener(this);
@@ -167,7 +162,7 @@ img = new ImageIcon("Picture/railwa.png");
 		panel.add(bt1);
 		
 		bt2 = new JButton("Exit");
-		bt2.setBounds(650, 500, 150,30);//(x,y,width, height)
+		bt2.setBounds(650, 500, 150,30);
 		bt2.setFont(f2);
 		bt2.setBackground(Color.GREEN);
 		bt2.addActionListener(this);
@@ -175,15 +170,14 @@ img = new ImageIcon("Picture/railwa.png");
 		
 		ta2 = new JTextArea();
 		JScrollPane scrollPane = new JScrollPane(ta2);
-		scrollPane.setBounds(50, 400, 300,200);//(x,y,width, height)
+		scrollPane.setBounds(50, 400, 450,200);
 		ta2.setFont(f2);
 		panel.add(scrollPane);
 		
-		//step 4(f)
+		
 		super.add(panel);
 	}
-	//there are 5 abstract methods for MouseListener interfaces
-	//so, we need to override those 5 abstract methods 
+	
 	public void mouseClicked(MouseEvent me) 
 	{	
 
@@ -196,12 +190,12 @@ img = new ImageIcon("Picture/railwa.png");
 	}
 	public void mousePressed(MouseEvent me) 
 	{ 
-		// Method required by MouseListener interface
+		
 	}
 
 	public void mouseReleased(MouseEvent me) 
 	{ 
-		// Method required by MouseListener interface
+		
 	}
 
 	public void mouseEntered(MouseEvent me) 
@@ -223,8 +217,7 @@ img = new ImageIcon("Picture/railwa.png");
 		else { }
 	}
 	
-	//there are 1 abstract method for ActionListener interfaces
-	//so, we need to override those 1 abstract method
+	
 	public void actionPerformed(ActionEvent ae)
 	{
 		if(ae.getSource() == bt2)
@@ -233,26 +226,24 @@ img = new ImageIcon("Picture/railwa.png");
 		}
 		if(ae.getSource() == btClear)
 {
-    // Clear text areas
+   
     ta2.setText("");
     if(ta != null) ta.setText("");
 
-    // Clear text fields
     tf1.setText("");
     tf2.setText("");
 
-    // Clear radio buttons / checkboxes
-    bg1.clearSelection(); // coach type
-    group.clearSelection(); // train name
+    bg1.clearSelection(); 
+    group.clearSelection(); 
 
-    // Optional: reset combo box
+    
     if(jb != null) jb.setSelectedIndex(0);
 }
 
 		if(ae.getSource() == bt3)
 		{
 	    String passengerName = tf1.getText().trim();
-    ta2.setText(""); // clear old content
+    ta2.setText(""); 
 
     if(passengerName.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Please enter passenger name to search!");
@@ -260,14 +251,14 @@ img = new ImageIcon("Picture/railwa.png");
     }
 
     try {
-        File file = new File("io/data.txt");  // <- make sure folder name is correct
+        File file = new File("file/data.txt");  
         if(file.exists()) {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;
             boolean found = false;
 
             while((line = br.readLine()) != null) {
-                // Check if this line contains the passenger name
+                
                 if(line.toLowerCase().contains(passengerName.toLowerCase())) {
                     ta2.append(line + "\n");
                     found = true;
@@ -290,15 +281,24 @@ img = new ImageIcon("Picture/railwa.png");
 if(ae.getSource() == bt1)
 {
     String passengerName = tf1.getText().trim();
-    String seatNumber = tf2.getText().trim(); // optional
+    
+	int seatNumber = 0;
+try {
+    seatNumber = Integer.parseInt(tf2.getText().trim());
+} catch (NumberFormatException nfe) {
+    JOptionPane.showMessageDialog(this, "Please enter a valid seat number!");
+    return; 
+}
+
+
     String coachType = "";
     String trainNames = "";
 
-    // Coach type
+    
     if(rb1.isSelected()) coachType = rb1.getText();
     else if(rb2.isSelected()) coachType = rb2.getText();
 
-    // Train names (allow multiple selection)
+    
     StringBuilder sb = new StringBuilder();
     if(cb1.isSelected()) sb.append(cb1.getText()).append(" ");
     if(cb2.isSelected()) sb.append(cb2.getText()).append(" ");
@@ -306,66 +306,51 @@ if(ae.getSource() == bt1)
     if(cb4.isSelected()) sb.append(cb4.getText()).append(" ");
     trainNames = sb.toString().trim();
 
-    // Basic validation
+    
     if(passengerName.isEmpty() || coachType.isEmpty() || trainNames.isEmpty()) {
         JOptionPane.showMessageDialog(this,"Please fill up all required information!");
         return;
     }
 
-    // Save ticket
-    TrainTicket ticket = new TrainTicket(passengerName, 100, 450.0); // adjust params as needed
+    
+    TrainTicket ticket = new TrainTicket(passengerName, seatNumber, 450.0); // adjust params as needed
     ticket.insertInfo();
 
     JOptionPane.showMessageDialog(this,"Information saved!");
+     try {
+        File file = new File("file/data.txt");
+        file.getParentFile().mkdirs(); // make sure "io" folder exists
+        BufferedWriter bw = new BufferedWriter(new FileWriter(file, true));
 
-    // Update ta2 to show all tickets
-    check();
+        bw.write("Passenger: " + passengerName + 
+                 ", Seat: " + seatNumber + 
+                 ", Coach: " + coachType + 
+                 ", Train: " + trainNames);
+        bw.newLine();
+
+        bw.close();
+
+
+        ta2.append("Passenger: " + passengerName + 
+                   ", Seat: " + seatNumber + 
+                   ", Coach: " + coachType + 
+                   ", Train: " + trainNames + "\n");
+    } catch (IOException ioe) {
+        ioe.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Error saving ticket info!");
+    }
+    
+    
 }
-		{
-			//JOptionPane.showMessageDialog(this,"Showing!");
-			String s1, s2, s3, s4, s5, s6;
-			
-			s1 = tf1.getText();
-			// pf1 is commented out above, so use "" for s2
-			s2 = ""; // pf1.getText();
-			if(rb1.isSelected()) { s3 = rb1.getText(); }
-			else if(rb2.isSelected()) { s3 = rb2.getText(); }
-			else { s3 = ""; }
-			if(cb1.isSelected() && cb2.isSelected() && cb3.isSelected() && cb4.isSelected())
-			{
-				s4 = cb1.getText()+" "+cb2.getText()+" "+cb3.getText()+" "+cb4.getText();
-			}
-			else if(cb1.isSelected()) { s4 = cb1.getText(); }
-			else if(cb2.isSelected()) { s4 = cb2.getText(); }
-			else if(cb3.isSelected()) { s4 = cb3.getText(); }
-			else if(cb4.isSelected()) { s4 = cb4.getText(); }
-			else { s4 = ""; }
-			s5 = (jb != null) ? jb.getSelectedItem().toString() : "";
-			s6 = (ta != null) ? ta.getText() : "";
-			
-			if(s1.isEmpty() || s2.isEmpty() || s3.isEmpty() || s4.isEmpty() || s5.isEmpty() || s6.isEmpty())
-			{
-				JOptionPane.showMessageDialog(this,"Please fill up all information!");
-			}
-			else 
-			{
-				
-				TrainTicket obj1= new TrainTicket(s1,100,450.0); 
-				obj1.insertInfo();
-				JOptionPane.showMessageDialog(this,"Information saved!");
-				check();
-			}
-		}
-
 	}
-
-	// Move check() method outside of actionPerformed, inside Frame class
+		
 	private void check() {
 		try {
-			File file = new File("io/data.txt");
+File file = new File("/Users/badhon/Documents/java/Project/GUIPROJECT/Data/userdata.txt");
+			// File file = new File("file/data.txt");
 			if (file.exists()) {
-				FileReader fr = new FileReader(file); //reads one character at a time
-				BufferedReader br = new BufferedReader(fr); //reads one line at a time
+				FileReader fr = new FileReader(file); 
+				BufferedReader br = new BufferedReader(fr); 
 				String line;
 				while ((line = br.readLine()) != null) {
 					ta2.append(line + "\n");
@@ -381,5 +366,6 @@ if(ae.getSource() == bt1)
 	} 
 
 } 
+
 
 
